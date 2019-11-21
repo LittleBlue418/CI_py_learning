@@ -1,4 +1,6 @@
 def count_upper_case(message):
+    # re-factored code
+    # return sum([1 for c in message if c.isupper()])
     count = 0
     for c in message:
         if c.isupper():
