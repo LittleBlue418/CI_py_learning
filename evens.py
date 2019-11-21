@@ -1,15 +1,25 @@
 """
-A challenge to write a function that returns true if where are an even number of even numbers
+A challenge to write a function that returns true if there are an even number of even numbers
 
 writing the assertions first and working backwards
 """
 
-def even_number_of_evens(numbers):
-    return False
+def even_number_of_evens(number):
+    even_numbers = []
+
+    for n in number:
+        if n % 2 == 0:
+            even_numbers.append(n)
+
+    if len(even_numbers) < 2:
+        return False
+    else:
+        return True
+
 
 assert even_number_of_evens([]) == False, "No numbers"
-#assert even_number_of_evens([2]) == False, "One even number"
-#assert even_number_of_evens([2, 4]) == True, "Two even numbers"
+assert even_number_of_evens([2]) == False, "One even number"
+assert even_number_of_evens([2, 4]) == True, "Two even numbers"
 #assert even_number_of_evens([2, 3]) == False, "Two numbers, only one even number"
 #assert even_number_of_evens([2, 3, 9, 10, 13, 7, 8]) == False, "Multiple numbers, three even"
 #assert even_number_of_evens([2, 3, 9, 10, 13, 7, 8, 5, 12]) == True, "Multiple numbers, four even"
