@@ -11,10 +11,7 @@ def even_number_of_evens(number):
         if n % 2 == 0:
             even_number_count += 1
 
-    if even_number_count > 0 and even_number_count % 2 == 0:
-        return True
-    else:
-        return False
+    return even_number_count > 0 and even_number_count % 2 == 0
 
 
 assert even_number_of_evens([]) == False, "No numbers"
