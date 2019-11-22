@@ -1,3 +1,5 @@
+list_of_numbers = [1,2,3,4,5,6,7,8]
+
 def number_of_evens(numbers):
     return 0
 
@@ -7,6 +9,10 @@ def tests_are_equal(actual, expected):
 def tests_not_equal(a, b):
     assert a != b, "Did not expect {0} but got {1}".format(a, b)
 
-tests_not_equal(number_of_evens([1,2,3,4,5]), 2)
+def test_is_in(collection, item):
+    assert item in collection, "{0} does not contain {1}".format(collection, item)
+
+tests_not_equal(number_of_evens(list_of_numbers), 2)
+test_is_in(list_of_numbers, 2)
 #tests_are_equal(number_of_evens([1,2,3,4,5]), 2)
 print("All tests padssed")
